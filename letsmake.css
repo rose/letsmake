@@ -1,0 +1,12 @@
+body {
+  background-color: #333;
+  color: #ccc;
+}
+
+.foo {
+  background-color: #222;
+  margin: .2em;
+  padding: 4px 8px;
+  display: inline-block;
+  border-radius: 8px;
+}
