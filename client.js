@@ -22,6 +22,14 @@ if (Meteor.isClient) {
   Template.showForm.events({
     "click #hideForm": function(event) {
       Session.set("show_new_lets_form", false);
+    } 
+  });
+
+  Template.showForm.events({
+    "click #addLets": function(event) {
+      titleBox = $("#title");
+      Lets.insert({title: titleBox.val()});
+      titleBox.val("");
     }
   });
 }
