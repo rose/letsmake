@@ -1,0 +1,14 @@
+<head>
+  <title>letsmake</title>
+</head>
+
+<body>
+  {{> lets}}
+</body>
+
+<template name="lets">
+  <b>hello world</b>
+  {{#each lets}}
+    <div><span class="foo">{{title}}</span></div>
+  {{/each}}
+</template>
