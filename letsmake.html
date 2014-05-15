@@ -11,4 +11,17 @@
   {{#each lets}}
     <div><span class="foo">{{title}}</span></div>
   {{/each}}
+  {{#if testFoo}}
+    {{> fooTrue}}
+  {{else}}
+    {{> fooFalse}}
+  {{/if}}
+</template>
+
+<template name="fooTrue">
+  <div class="foo">Foo!</div>
+</template>
+
+<template name="fooFalse">
+  <div class="foo">No Foo!</div>
 </template>
