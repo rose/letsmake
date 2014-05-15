@@ -1,5 +1,5 @@
 if (Meteor.isClient) {
-  Session.setDefault("foo", true);
+  Session.set("show_new_lets_form", false);
 
   Template.letList.lets = function() {
     return Lets.find({});
@@ -9,19 +9,19 @@ if (Meteor.isClient) {
     return Lets.find({}).count();
   }
 
-  Template.letList.testFoo = function() {
-    return Session.get("foo");
+  Template.letList.showingForm = function() {
+    return Session.get("show_new_lets_form");
   }
 
-  Template.fooFalse.events({
-    "click #toggle": function(event) {
-      Session.set("foo", true);
+  Template.offerForm.events({
+    "click #getForm": function(event) {
+      Session.set("show_new_lets_form", true);
     }
   });
 
-  Template.fooTrue.events({
-    "click #toggle": function(event) {
-      Session.set("foo", false);
+  Template.showForm.events({
+    "click #hideForm": function(event) {
+      Session.set("show_new_lets_form", false);
     }
   });
 }

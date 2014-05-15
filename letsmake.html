@@ -11,17 +11,17 @@
   {{#each lets}}
     <div><span class="foo">{{title}}</span></div>
   {{/each}}
-  {{#if testFoo}}
-    {{> fooTrue}}
+  {{#if showingForm}}
+    {{> showForm}}
   {{else}}
-    {{> fooFalse}}
+    {{> offerForm}}
   {{/if}}
 </template>
 
-<template name="fooTrue">
-  <div id="toggle" class="foo">Foo!</div>
+<template name="showForm">
+  <div id="hideForm" class="foo">Form!</div>
 </template>
 
-<template name="fooFalse">
-  <div id="toggle" class="foo">No Foo!</div>
+<template name="offerForm">
+  <div id="getForm" class="foo">Wanna form?</div>
 </template>
