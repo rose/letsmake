@@ -16,7 +16,6 @@ if (Meteor.isClient) {
   Template.offerForm.events({
     "click #getForm": function(event) {
       Session.set("show_new_lets_form", true);
-      alert("user id is currently" + this.userId);
     }
   });
 
@@ -33,4 +32,8 @@ if (Meteor.isClient) {
       titleBox.val("");
     }
   });
+
+  Template.showForm.getSweetIdea = function() {
+    return sweetIdea();
+  };
 }
