@@ -7,10 +7,12 @@
 </body>
 
 <template name="letList">
-  <div class="foo">There are {{count}} Lets available!</div>
+  <div class="let_header">There are {{count}} Lets available!</div>
+  <div class="let_list">
   {{#each lets}}
-    <div><span class="foo">{{title}}</span></div>
+    <div class="let_item">{{title}}</div>
   {{/each}}
+  </div> <!--let_list-->
   {{#if showingForm}}
     {{> showForm}}
   {{else}}
@@ -21,10 +23,10 @@
  
 <template name="showForm">
   This week I wanna make <input type="text" id="title" placeholder="{{getSweetIdea}}" />!
-  <div id="addLets" class="foo">Let's make it!</div>
-  <div id="hideForm" class="foo">Done</div>
+  <div id="addLets" class="button">Let's make it!</div>
+  <div id="hideForm" class="button">Done</div>
 </template>
 
 <template name="offerForm">
-  <div id="getForm" class="foo">Got another idea?</div>
+  <div id="getForm" class="button">Got another idea?</div>
 </template>

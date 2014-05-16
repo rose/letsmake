@@ -1,12 +1,31 @@
 body {
   background-color: #333;
   color: #ccc;
+  font-family: Impact, Charcoal, sans-serif;
 }
 
-.foo {
+.button {
   background-color: #222;
   margin: .2em;
   padding: 4px 8px;
   display: inline-block;
   border-radius: 8px;
+}
+
+.let_list {
+  margin: .5em;
+  padding: .5em;
+}
+
+.let_item {
+  margin: .5em;
+}
+
+.let_header {
+  margin: .2em;
+  padding: 4px 8px;
+  border-top: 2px solid #000;
+  border-bottom: 2px solid #000;
+  display: inline-block;
+  background-color: #222;
 }
