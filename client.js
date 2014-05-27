@@ -26,11 +26,15 @@ if (Meteor.isClient) {
   });
 
   Template.showForm.events({
-    "keyup #title": function(event) {
+    "keydown #title": function(event) {
       if (event.which == 13) {
         titleBox = $("#title");
         Lets.insert({title: titleBox.val()});
         titleBox.val("");
+      }
+
+      if (event.which == 27) {
+        Session.set("show_new_lets_form", false);
       }
     }
   });
