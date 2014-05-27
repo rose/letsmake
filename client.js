@@ -26,6 +26,16 @@ if (Meteor.isClient) {
   });
 
   Template.showForm.events({
+    "keyup #title": function(event) {
+      if (event.which == 13) {
+        titleBox = $("#title");
+        Lets.insert({title: titleBox.val()});
+        titleBox.val("");
+      }
+    }
+  });
+
+  Template.showForm.events({
     "click #addLets": function(event) {
       titleBox = $("#title");
       Lets.insert({title: titleBox.val()});
