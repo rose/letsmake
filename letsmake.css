@@ -29,3 +29,7 @@ body {
   display: inline-block;
   background-color: #222;
 }
+
+.login-buttons-dropdown-align-right {
+  float: right;
+}
