@@ -29,8 +29,10 @@ if (Meteor.isClient) {
     "keydown #title": function(event) {
       if (event.which == 13) {
         titleBox = $("#title");
-        Lets.insert({title: titleBox.val()});
-        titleBox.val("");
+        if (titleBox.val().length > 4) {
+          Lets.insert({title: titleBox.val()});
+          titleBox.val("");
+        };
       }
 
       if (event.which == 27) {
@@ -42,8 +44,10 @@ if (Meteor.isClient) {
   Template.showForm.events({
     "click #addLets": function(event) {
       titleBox = $("#title");
-      Lets.insert({title: titleBox.val()});
-      titleBox.val("");
+      if (titleBox.val().length > 4) {
+        Lets.insert({title: titleBox.val()});
+        titleBox.val("");
+      }
     }
   });
 
